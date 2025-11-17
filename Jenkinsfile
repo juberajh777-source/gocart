@@ -23,7 +23,7 @@ pipeline {
         stage('Run_dev') {
             steps {
                 echo "running npm dev..."
-                sh 'npm run dev'
+                sh 'npm run dev &'
             }
         }
     }
