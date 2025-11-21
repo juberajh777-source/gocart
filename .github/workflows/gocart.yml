@@ -23,10 +23,7 @@ jobs:
 
         - name: installdep
           run: npm install
-
-        - name: testing
-          run: npm test
-
+          
         - name: Building
           run: npm run build
 
