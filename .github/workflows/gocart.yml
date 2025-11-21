@@ -1,0 +1,36 @@
+name: gocart ci
+
+on:
+  push: 
+    branches:
+     - main
+  pull_request:
+   branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+        - name: checkout
+          uses: actions/checkout@v4
+
+        - name: nodesetup
+          uses: actions/setup-node@v4
+          with: 
+            node-version: 20
+
+        - name: installdep
+          run: npm install
+
+        - name: testing
+          run: npm test
+
+        - name: Building
+          run: npm run build
+
+
+
+
+
